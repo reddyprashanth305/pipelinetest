@@ -26,7 +26,7 @@
 				}	
 				stage('STATUS') {
 					steps {
-						sh 'echo "Pipeline job is completed"'		
+						sh 'echo "pipeline job is completed"'		
 					}
 				}
 			}
