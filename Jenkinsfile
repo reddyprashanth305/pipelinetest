@@ -6,6 +6,7 @@
 						sh '''
 							#!/bin/bash 
 							echo "Build stage in Jenkinsfile"
+							sleep 5
 						'''
 					}
 				}
