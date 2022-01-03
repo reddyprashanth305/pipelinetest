@@ -5,23 +5,28 @@
 					steps {
 						sh '''
 							#!/bin/bash 
-							echo "This is a fist build stage in Jenkinsfile"
+							echo "Build stage in Jenkinsfile"
 						'''
 					}
 				}
 				stage('TEST1') {
 					steps {
-						sh 'echo "fist test stage in Jenkinsfile"'
+						sh 'echo "Test1 stage in Jenkinsfile"'
 					}	
 				}
 				stage('TEST2') {
 					steps {
-						sh 'echo "Second test stage in Jenkinsfile"'
+						sh 'echo "Test2 stage in Jenkinsfile"'
 					}	
 				}
 				stage('DEPLOY') {
 					steps {
 						sh 'echo "Final DEPLOY stage in Jenkinsfile"'
+					}
+				}	
+				stage('STATUS') {
+					steps {
+						sh 'echo "Pipeline job is completed"'		
 					}
 				}
 			}
