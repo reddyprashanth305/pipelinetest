@@ -1,0 +1,21 @@
+pipeline    {
+            agent any
+            stages {
+             stage('BUILD'){
+                steps {
+                        git branch: 'main', url :'https://github.com/reddyprashanth305/pipelinetest.git'
+                        sh 'mvn clean install'
+                    }
+                  }
+                  stage('DEPLOY') {
+                   steps {
+                        sh 'scp -r /opt/jenkins/workspace/pipeline-job/target/hello-world-war-1.0.0.war/ ec2-user@172.31.5.107:/home/ec2-user/tomcat/apache-tomcat-8.5.73/webapps/'
+             	 }
+				     }
+			        	stage('STATUS') {
+					      steps {
+						      sh 'echo "pipeline job succefully build in slave-01 and deployed in slave-02 in tomcat webapp folder"'	
+					}
+				}
+			}
+		}
