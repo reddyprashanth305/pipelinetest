@@ -14,7 +14,7 @@ pipeline    {
 				     }
 			        	stage('STATUS') {
 					      steps {
-						      sh 'echo "pipeline job succefully build in slave-01 and deployed in slave-02 in tomcat webapp folder"'	
+						      sh 'echo "java file build in one slave & deploy in other slave using pipeline successfully completed"'	
 					}
 				}
 			}
