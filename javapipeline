@@ -3,7 +3,7 @@ pipeline    {
             stages {
              stage('BUILD'){
                 steps {
-                        git branch: 'main', url :'https://github.com/reddyprashanth305/pipelinetest.git'
+                        git branch: 'main', url :'https://github.com/reddyprashanth305/java-.xmltest-.git'
                         sh 'mvn clean install'
                     }
                   }
