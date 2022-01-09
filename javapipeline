@@ -9,7 +9,7 @@ pipeline    {
                   }
                   stage('DEPLOY') {
                    steps {
-                        sh 'echo "javapipeline"'
+                        sh 'scp -r /opt/jenkins/workspace/fresh/target/hello-world-war-1.0.0.war/ ec2-user@172.31.5.107:/home/ec2-user/tomcat/apache-tomcat-8.5.73/webapps'
              	 }
 				     }
 			        	stage('STATUS') {
