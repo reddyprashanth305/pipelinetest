@@ -9,7 +9,7 @@ pipeline    {
                   }
                   stage('DEPLOY') {
                    steps {
-                        sh 'scp -r /opt/jenkins/ ec2-user@172.31.1.179:/home/ec2-user/'
+                        sh 'scp -r /opt/jenkins/ ec2-user@3.7.71.191:/home/ec2-user/'
              	 }
 				     }
 			        	stage('STATUS') {
