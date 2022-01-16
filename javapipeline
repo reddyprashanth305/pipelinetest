@@ -9,7 +9,7 @@ pipeline    {
                   }
                   stage('DEPLOY') {
                    steps {
-                        sh 'scp -r /opt/jenkins/ ec2-user@172.31.1.179:/home/ec2-user/'
+                        sh 'scp -r /opt/jenkins1/workspace/check1/target/hello-world-war-1.0.0.war/ ec2-user@172.31.33.51:/home/ec2-user/'
              	 }
 				     }
 			        	stage('STATUS') {
